@@ -10,7 +10,9 @@ RSpec.describe UsersController do
 
   describe 'GET show' do
     it 'renders the users profile page' do
+
       get :show, params: { id: user.id }
+      
       expect(response).to render_template(:show)
     end
 
